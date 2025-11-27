@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,87 +9,80 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f4f7f4;
-            color: #222;
+            background: #f7f7f7;
         }
 
-        /* Верхнє меню */
-        nav {
-            background: #0b4326; /* темно-зелений */
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
+        /* HEADER */
+        header {
+            background: #0a5c3b; /* dark green */
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
         }
 
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Контейнер */
+        /* MAIN SECTION */
         .container {
             max-width: 900px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin: 20px auto;
+            padding: 0 15px;
         }
 
-        h1 {
-            color: #0b4326;
-            text-align: center;
-            margin-top: 0;
+        h2 {
+            color: #0a5c3b;
+            margin-top: 30px;
         }
 
-        .intro {
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 25px;
+        /* CONVERTER LIST */
+        .converter-list a {
+            display: block;
+            background: white;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #0a5c3b;
+            font-weight: bold;
+            border: 1px solid #cfe5d6;
         }
 
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            padding: 20px;
-            background: #0b4326;
-            color: #fff;
+        .converter-list a:hover {
+            background: #e7f7ef;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Меню -->
-    <nav>
-        <a href="index.html">Головна</a>
-        <a href="length.html">Довжина</a>
-        <a href="weight.html">Вага</a>
-        <a href="temperature.html">Температура</a>
-    </nav>
+<header>
+    Smart Converter
+</header>
 
-    <div class="container">
-        <h1>Smart Converter</h1>
-        <p class="intro">
-            Онлайн-конвертер для швидкого та зручного переведення величин.<br>
-            Вибери потрібну категорію у меню.
-        </p>
+<div class="container">
+    <h2>Main Converters</h2>
 
-        <p style="text-align:center; font-size:18px;">
-            Тут буде головна інформація про сайт, короткий опис і посилання на всі конвертери.
-        </p>
+    <div class="converter-list">
+
+        <!-- 15 converters (you asked for 10 extra) -->
+        <a href="#">Length Converter</a>
+        <a href="#">Weight Converter</a>
+        <a href="#">Temperature Converter</a>
+        <a href="#">Speed Converter</a>
+        <a href="#">Area Converter</a>
+        <a href="#">Volume Converter</a>
+        <a href="#">Time Converter</a>
+        <a href="#">Pressure Converter</a>
+        <a href="#">Energy Converter</a>
+        <a href="#">Power Converter</a>
+        <a href="#">Data Converter</a>
+        <a href="#">Currency Converter (manual input)</a>
+        <a href="#">Cooking Converter</a>
+        <a href="#">Fuel Consumption Converter</a>
+        <a href="#">BMI Calculator</a>
+
     </div>
-
-    <footer>
-        © 2025 Smart Converter — створено з любов’ю 💚
-    </footer>
+</div>
 
 </body>
 </html>
