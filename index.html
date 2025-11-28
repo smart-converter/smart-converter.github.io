@@ -1,1 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Smart Converter – Free Online Unit Converters</title>
+    <meta name="description" content="Smart Converter is a fast and simple online tool for converting units: length, weight, temperature, time, currency, data, and more. Free, accurate, mobile-friendly.">
+    
+    <!-- Styles -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6fef7;
+            color: #222;
+        }
+
+        header {
+            background: #2e8b57;
+            padding: 18px;
+            color: #fff;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav {
+            background: #e8f7ec;
+            border-bottom: 1px solid #cde9d4;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: #2e8b57;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #2e8b57;
+        }
+
+        .converter-box {
+            background: #ffffff;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 22px;
+            border: 1px solid #d7eedd;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 6px;
+            border: 1px solid #8ec5a2;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #2e8b57;
+            padding: 18px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            header { font-size: 20px; padding: 14px; }
+            nav a { display: block; padding: 8px 0; }
+        }
+    </style>
+
+</head>
+<body>
+
+<header>Smart Converter</header>
+
+<nav>
+    <a href="#length">Length</a>
+    <a href="#weight">Weight</a>
+    <a href="#temperature">Temperature</a>
+    <a href="#area">Area</a>
+    <a href="#volume">Volume</a>
+    <a href="#speed">Speed</a>
+    <a href="#time">Time</a>
+    <a href="#pressure">Pressure</a>
+    <a href="#energy">Energy</a>
+    <a href="#currency">Currency</a>
+    <a href="#data">Data</a>
+    <a href="#power">Power</a>
+    <a href="#angle">Angle</a>
+</nav>
+
+<div class="container">
+
+    <h1>Online Unit Converters</h1>
+    <p>Fast and accurate unit converters for everyday use. Choose a category below.</p>
+
+    <!-- --- 13 CONVERTERS SECTIONS --- -->
+
+    <!-- LENGTH -->
+    <section id="length" class="converter-box">
+        <h2>Length Converter</h2>
+        <input type="number" id="lengthInput" placeholder="Enter value">
+        <select id="lengthFrom">
+            <option value="m">Meters</option>
+            <option value="km">Kilometers</option>
+            <option value="cm">Centimeters</option>
+            <option value="mm">Millimeters</option>
+            <option value="mi">Miles</option>
+            <option value="ft">Feet</option>
+        </select>
+        <select id="lengthTo">
+            <option value="m">Meters</option>
+            <option value="km">Kilometers</option>
+            <option value="cm">Centimeters</option>
+            <option value="mm">Millimeters</option>
+            <option value="mi">Miles</option>
+            <option value="ft">Feet</option>
+        </select>
+        <p><strong>Result:</strong> <span id="lengthResult">—</span></p>
+    </section>
+
+    <!-- WEIGHT -->
+    <section id="weight" class="converter-box">
+        <h2>Weight Converter</h2>
+        <input type="number" id="weightInput" placeholder="Enter value">
+        <select id="weightFrom">
+            <option value="kg">Kilograms</option>
+            <option value="g">Grams</option>
+            <option value="lbs">Pounds</option>
+        </select>
+        <select id="weightTo">
+            <option value="kg">Kilograms</option>
+            <option value="g">Grams</option>
+            <option value="lbs">Pounds</option>
+        </select>
+        <p><strong>Result:</strong> <span id="weightResult">—</span></p>
+    </section>
+
+    <!-- TEMPERATURE -->
+    <section id="temperature" class="converter-box">
+        <h2>Temperature Converter</h2>
+        <input type="number" id="tempInput" placeholder="Enter value">
+        <select id="tempFrom">
+            <option value="c">Celsius</option>
+            <option value="f">Fahrenheit</option>
+            <option value="k">Kelvin</option>
+        </select>
+        <select id="tempTo">
+            <option value="c">Celsius</option>
+            <option value="f">Fahrenheit</option>
+            <option value="k">Kelvin</option>
+        </select>
+        <p><strong>Result:</strong> <span id="tempResult">—</span></p>
+    </section>
+
+    <!-- PLACEHOLDERS for 10 more categories (ready for expansion) -->
+    <section id="area" class="converter-box"><h2>Area Converter</h2><p>Coming soon…</p></section>
+    <section id="volume" class="converter-box"><h2>Volume Converter</h2><p>Coming soon…</p></section>
+    <section id="speed" class="converter-box"><h2>Speed Converter</h2><p>Coming soon…</p></section>
+    <section id="time" class="converter-box"><h2>Time Converter</h2><p>Coming soon…</p></section>
+    <section id="pressure" class="converter-box"><h2>Pressure Converter</h2><p>Coming soon…</p></section>
+    <section id="energy" class="converter-box"><h2>Energy Converter</h2><p>Coming soon…</p></section>
+    <section id="currency" class="converter-box"><h2>Currency Converter</h2><p>Coming soon…</p></section>
+    <section id="data" class="converter-box"><h2>Data Converter</h2><p>Coming soon…</p></section>
+    <section id="power" class="converter-box"><h2>Power Converter</h2><p>Coming soon…</p></section>
+    <section id="angle" class="converter-box"><h2>Angle Converter</h2><p>Coming soon…</p></section>
+
+</div>
+
+<footer>
+    © 2025 Smart Converter — Free Online Unit Converters
+</footer>
+
+<!-- Basic JS for 3 working converters -->
+<script>
+    // LENGTH
+    const lengthRates = { m: 1, km: 0.001, cm: 100, mm: 1000, mi: 0.000621371, ft: 3.28084 };
+    function convertLength() {
+        let val = +lengthInput.value;
+        let res = val * (lengthRates[lengthTo.value] / lengthRates[lengthFrom.value]);
+        lengthResult.textContent = isNaN(res) ? "—" : res.toFixed(4);
+    }
+    lengthInput.oninput = lengthFrom.onchange = lengthTo.onchange = convertLength;
+
+    // WEIGHT
+    const weightRates = { kg: 1, g: 1000, lbs: 2.20462 };
+    function convertWeight() {
+        let val = +weightInput.value;
+        let res = val * (weightRates[weightTo.value] / weightRates[weightFrom.value]);
+        weightResult.textContent = isNaN(res) ? "—" : res.toFixed(4);
+    }
+    weightInput.oninput = weightFrom.onchange = weightTo.onchange = convertWeight;
+
+    // TEMPERATURE
+    function convertTemperature() {
+        let val = +tempInput.value;
+        let from = tempFrom.value;
+        let to = tempTo.value;
+        let c;
+
+        if (from === "c") c = val;
+        if (from === "f") c = (val - 32) * 5/9;
+        if (from === "k") c = val - 273.15;
+
+        let result;
+        if (to === "c") result = c;
+        if (to === "f") result = (c * 9/5) + 32;
+        if (to === "k") result = c + 273.15;
+
+        tempResult.textContent = isNaN(result) ? "—" : result.toFixed(2);
+    }
+    tempInput.oninput = tempFrom.onchange = tempTo.onchange = convertTemperature;
+</script>
+
+</body>
+</html>
