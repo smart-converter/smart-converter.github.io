@@ -6,43 +6,82 @@
 
     <title>Smart Converter – Free Online Unit Converters</title>
     <meta name="description" content="Smart Converter is a fast and simple online tool for converting units: length, weight, temperature, time, currency, data, and more. Free, accurate, mobile-friendly.">
-    
-    <!-- Styles -->
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: #f6fef7;
             color: #222;
-        <header>
-  <h1>Smart Converter</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="privacy.html">Privacy Policy</a>
-  </nav>
+        }
+        header {
+            background: #2e7d32;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        nav.category-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: #e0f2e9;
+            padding: 10px;
+        }
+        nav.category-nav a {
+            margin: 5px 10px;
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .converter-box {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2e7d32;
+            color: white;
+            margin-top: 40px;
+        }
+        footer a {
+            color: #bbffce;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Smart Converter</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </nav>
 </header>
 
-        
-        
-
-        
-        
-
-        
-        
-
-    
-        
-
-        
-        
-
-        
-Smart Converter</header>
-
-<nav>
+<nav class="category-nav">
     <a href="#length">Length</a>
     <a href="#weight">Weight</a>
     <a href="#temperature">Temperature</a>
@@ -60,10 +99,8 @@ Smart Converter</header>
 
 <div class="container">
 
-    <h1>Online Unit Converters</h1>
+    <h2>Online Unit Converters</h2>
     <p>Fast and accurate unit converters for everyday use. Choose a category below.</p>
-
-    <!-- --- 13 CONVERTERS SECTIONS --- -->
 
     <!-- LENGTH -->
     <section id="length" class="converter-box">
@@ -122,7 +159,7 @@ Smart Converter</header>
         <p><strong>Result:</strong> <span id="tempResult">—</span></p>
     </section>
 
-    <!-- PLACEHOLDERS for 10 more categories (ready for expansion) -->
+    <!-- 10 more "Coming soon" boxes -->
     <section id="area" class="converter-box"><h2>Area Converter</h2><p>Coming soon…</p></section>
     <section id="volume" class="converter-box"><h2>Volume Converter</h2><p>Coming soon…</p></section>
     <section id="speed" class="converter-box"><h2>Speed Converter</h2><p>Coming soon…</p></section>
@@ -137,10 +174,11 @@ Smart Converter</header>
 </div>
 
 <footer>
-    © 2025 Smart Converter — Free Online Unit Converters
+    © 2025 Smart Converter — Free Online Unit Converters  
+    <br>
+    <a href="privacy.html">Privacy Policy</a>
 </footer>
 
-<!-- Basic JS for 3 working converters -->
 <script>
     // LENGTH
     const lengthRates = { m: 1, km: 0.001, cm: 100, mm: 1000, mi: 0.000621371, ft: 3.28084 };
@@ -180,14 +218,6 @@ Smart Converter</header>
     }
     tempInput.oninput = tempFrom.onchange = tempTo.onchange = convertTemperature;
 </script>
-<footer style="text-align:center; margin-top:40px;">
-  <a href="privacy.html">Privacy Policy</a>
-    <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    
-</nav>
-</footer>
+
 </body>
 </html>
