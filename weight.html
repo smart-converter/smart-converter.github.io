@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weight Converter – Smart Converter</title>
+    <meta name="description" content="Fast and accurate online weight converter: kilograms, grams, pounds, ounces. Free, simple, mobile-friendly.">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6fef7;
+            color: #222;
+        }
+        header {
+            background: #2a7c4f;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #d8f3dc;
+        }
+        .converter-box input,
+        .converter-box select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 15px;
+            background: #2a7c4f;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Weight Converter</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="weight.html">Weight</a>
+        <a href="temperature.html">Temperature</a>
+        <a href="volume.html">Volume</a>
+        <a href="area.html">Area</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Convert Weight Units</h2>
+
+    <section class="converter-box">
+        <input type="number" id="weightInput" placeholder="Enter value">
+
+        <select id="weightFrom">
+            <option value="kg">Kilograms (kg)</option>
+            <option value="g">Grams (g)</option>
+            <option value="lbs">Pounds (lbs)</option>
+            <option value="oz">Ounces (oz)</option>
+        </select>
+
+        <select id="weightTo">
+            <option value="kg">Kilograms (kg)</option>
+            <option value="g">Grams (g)</option>
+            <option value="lbs">Pounds (lbs)</option>
+            <option value="oz">Ounces (oz)</option>
+        </select>
+
+        <p><strong>Result:</strong> <span id="weightResult">—</span></p>
+    </section>
+</div>
+
+<footer>© 2025 Smart Converter</footer>
+
+<script>
+    const weightRates = {
+        kg: 1,
+        g: 1000,
+        lbs: 2.20462,
+        oz: 35.274
+    };
+
+    function convertWeight() {
+        let val = +weightInput.value;
+        let res = val * (weightRates[weightTo.value] / weightRates[weightFrom.value]);
+        weightResult.textContent = isNaN(res) ? "—" : res.toFixed(4);
+    }
+
+    weightInput.oninput = weightFrom.onchange = weightTo.onchange = convertWeight;
+</script>
+
+</body>
+</html>
