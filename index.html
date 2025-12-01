@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Smart Converter – Free Online Unit Converters</title>
-    <meta name="description" content="Smart Converter is a fast and simple online tool for converting units: length, weight, temperature, time, currency, data, and more. Free, accurate, mobile-friendly.">
 
     <style>
         body {
@@ -14,57 +12,60 @@
             background: #f6fef7;
             color: #222;
         }
+
         header {
-            background: #2e7d32;
-            padding: 15px;
+            background: #2ecc71;
+            padding: 20px;
             text-align: center;
             color: white;
         }
+
         header nav a {
+            margin: 0 10px;
             color: white;
             text-decoration: none;
-            margin: 0 10px;
             font-weight: bold;
         }
-        header nav a:hover {
-            text-decoration: underline;
-        }
-        nav.category-nav {
+
+        .category-nav {
             display: flex;
             flex-wrap: wrap;
+            gap: 10px;
             justify-content: center;
-            background: #e0f2e9;
-            padding: 10px;
+            background: #e8f9ee;
+            padding: 15px;
+            margin-top: 10px;
         }
-        nav.category-nav a {
-            margin: 5px 10px;
+
+        .category-nav a {
+            padding: 8px 15px;
+            background: #2ecc71;
+            color: white;
+            border-radius: 5px;
             text-decoration: none;
-            color: #2e7d32;
-            font-weight: bold;
+            font-size: 14px;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: auto;
             padding: 20px;
         }
+
         .converter-box {
             background: white;
-            padding: 15px;
-            margin: 15px 0;
+            padding: 20px;
+            margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
         }
+
         footer {
             text-align: center;
             padding: 20px;
-            background: #2e7d32;
-            color: white;
             margin-top: 40px;
-        }
-        footer a {
-            color: #bbffce;
-            margin: 0 10px;
-            text-decoration: none;
+            background: #e8f9ee;
+            color: #333;
         }
     </style>
 </head>
@@ -77,34 +78,25 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="privacy.html">Privacy</a>
     </nav>
 </header>
 
 <nav class="category-nav">
-    <a href="#length">Length</a>
-    <a href="#weight">Weight</a>
-    <a href="#temperature">Temperature</a>
-    <a href="#area">Area</a>
-    <a href="#volume">Volume</a>
-    <a href="#speed">Speed</a>
-    <a href="#time">Time</a>
-    <a href="#pressure">Pressure</a>
-    <a href="#energy">Energy</a>
-    <a href="#currency">Currency</a>
-    <a href="#data">Data</a>
-    <a href="#power">Power</a>
-    <a href="#angle">Angle</a>
+    <a href="length.html">Length</a>
+    <a href="weight.html">Weight</a>
+    <a href="temperature.html">Temperature</a>
+    <a href="volume.html">Volume</a>
+    <a href="area.html">Area</a>
 </nav>
 
 <div class="container">
-
     <h2>Online Unit Converters</h2>
     <p>Fast and accurate unit converters for everyday use. Choose a category below.</p>
 
     <!-- LENGTH -->
-    <section id="length" class="converter-box">
-        <h2>Length Converter</h2>
+    <section class="converter-box">
+        <h3>Length Converter</h3>
         <input type="number" id="lengthInput" placeholder="Enter value">
         <select id="lengthFrom">
             <option value="m">Meters</option>
@@ -126,8 +118,8 @@
     </section>
 
     <!-- WEIGHT -->
-    <section id="weight" class="converter-box">
-        <h2>Weight Converter</h2>
+    <section class="converter-box">
+        <h3>Weight Converter</h3>
         <input type="number" id="weightInput" placeholder="Enter value">
         <select id="weightFrom">
             <option value="kg">Kilograms</option>
@@ -143,8 +135,8 @@
     </section>
 
     <!-- TEMPERATURE -->
-    <section id="temperature" class="converter-box">
-        <h2>Temperature Converter</h2>
+    <section class="converter-box">
+        <h3>Temperature Converter</h3>
         <input type="number" id="tempInput" placeholder="Enter value">
         <select id="tempFrom">
             <option value="c">Celsius</option>
@@ -158,25 +150,10 @@
         </select>
         <p><strong>Result:</strong> <span id="tempResult">—</span></p>
     </section>
-
-    <!-- 10 more "Coming soon" boxes -->
-    <section id="area" class="converter-box"><h2>Area Converter</h2><p>Coming soon…</p></section>
-    <section id="volume" class="converter-box"><h2>Volume Converter</h2><p>Coming soon…</p></section>
-    <section id="speed" class="converter-box"><h2>Speed Converter</h2><p>Coming soon…</p></section>
-    <section id="time" class="converter-box"><h2>Time Converter</h2><p>Coming soon…</p></section>
-    <section id="pressure" class="converter-box"><h2>Pressure Converter</h2><p>Coming soon…</p></section>
-    <section id="energy" class="converter-box"><h2>Energy Converter</h2><p>Coming soon…</p></section>
-    <section id="currency" class="converter-box"><h2>Currency Converter</h2><p>Coming soon…</p></section>
-    <section id="data" class="converter-box"><h2>Data Converter</h2><p>Coming soon…</p></section>
-    <section id="power" class="converter-box"><h2>Power Converter</h2><p>Coming soon…</p></section>
-    <section id="angle" class="converter-box"><h2>Angle Converter</h2><p>Coming soon…</p></section>
-
 </div>
 
 <footer>
-    © 2025 Smart Converter — Free Online Unit Converters  
-    <br>
-    <a href="privacy.html">Privacy Policy</a>
+    © 2025 Smart Converter — Free Online Unit Converters
 </footer>
 
 <script>
