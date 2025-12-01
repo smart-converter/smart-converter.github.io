@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter – Smart Converter</title>
+    <meta name="description" content="Fast and accurate online temperature converter: Celsius, Fahrenheit, Kelvin. Free, simple, mobile-friendly.">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6fef7;
+            color: #222;
+        }
+        header {
+            background: #2a7c4f;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #d8f3dc;
+        }
+        .converter-box input,
+        .converter-box select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 15px;
+            background: #2a7c4f;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Temperature Converter</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="weight.html">Weight</a>
+        <a href="temperature.html">Temperature</a>
+        <a href="volume.html">Volume</a>
+        <a href="area.html">Area</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Convert Temperature Units</h2>
+
+    <section class="converter-box">
+        <input type="number" id="tempInput" placeholder="Enter value">
+
+        <select id="tempFrom">
+            <option value="c">Celsius (°C)</option>
+            <option value="f">Fahrenheit (°F)</option>
+            <option value="k">Kelvin (K)</option>
+        </select>
+
+        <select id="tempTo">
+            <option value="c">Celsius (°C)</option>
+            <option value="f">Fahrenheit (°F)</option>
+            <option value="k">Kelvin (K)</option>
+        </select>
+
+        <p><strong>Result:</strong> <span id="tempResult">—</span></p>
+    </section>
+</div>
+
+<footer>© 2025 Smart Converter</footer>
+
+<script>
+    function convertTemperature() {
+        let val = +tempInput.value;
+        let from = tempFrom.value;
+        let to = tempTo.value;
+        let c;
+
+        // convert input to Celsius
+        if (from === "c") c = val;
+        if (from === "f") c = (val - 32) * 5/9;
+        if (from === "k") c = val - 273.15;
+
+        let result;
+
+        // convert Celsius to target
+        if (to === "c") result = c;
+        if (to === "f") result = (c * 9/5) + 32;
+        if (to === "k") result = c + 273.15;
+
+        tempResult.textContent = isNaN(result) ? "—" : result.toFixed(2);
+    }
+
+    tempInput.oninput = tempFrom.onchange = tempTo.onchange = convertTemperature;
+</script>
+
+</body>
+</html>
