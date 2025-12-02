@@ -1,0 +1,56 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* Layout */
+body {
+    background: #f7fafc;
+    color: #333;
+    padding: 20px;
+}
+header {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #0070f3;
+    font-weight: bold;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+h1 {
+    margin-bottom: 15px;
+    color: #222;
+}
+label {
+    font-weight: bold;
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.result-box {
+    padding: 15px;
+    background: #f1f9ff;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 18px;
+    border: 1px solid #b3dcff;
+}
