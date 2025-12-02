@@ -1,1 +1,152 @@
-<!DOCTYPE html><html><head><title>Length Converter</title><link rel="stylesheet" href="styles.css"></head><body><header><nav><a href="index.html">Home</a><a href="length.html">Length</a><a href="weight.html">Weight</a><a href="volume.html">Volume</a><a href="temperature.html">Temperature</a></nav></header><div class="container"><h1>Length Converter</h1><label>Value:</label><input id="inputValue" type="number"><label>From:</label><select id="fromUnit"><option value="m">Meter</option><option value="km">Kilometer</option><option value="cm">Centimeter</option><option value="mm">Millimeter</option></select><label>To:</label><select id="toUnit"><option value="m">Meter</option><option value="km">Kilometer</option><option value="cm">Centimeter</option><option value="mm">Millimeter</option></select><button onclick="convert('length')">Convert</button><div class="result-box" id="result"></div></div><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Converter</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e8f5e9;
+            color: #2e7d32;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            background: #2e7d32;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            margin: 30px auto;
+            max-width: 400px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #2e7d32;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 2px solid #2e7d32;
+            border-radius: 10px;
+        }
+
+        button {
+            background:#2e7d32;
+            color:white;
+            padding:12px 20px;
+            font-size:16px;
+            border:none;
+            border-radius:10px;
+            font-weight:bold;
+            width:100%;
+            margin-top:10px;
+        }
+
+        button:hover {
+            background:#1b5e20;
+        }
+
+        a.back {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background: #2e7d32;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        a.back:hover {
+            background: #1b5e20;
+        }
+    </style>
+
+    <script>
+        function convertLength() {
+            let value = parseFloat(document.getElementById("value").value);
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+
+            if (isNaN(value)) {
+                document.getElementById("result").innerText = "Enter a valid number.";
+                return;
+            }
+
+            // Convert everything to meters
+            const toMeters = {
+                meters: 1,
+                centimeters: 0.01,
+                millimeters: 0.001,
+                kilometers: 1000,
+                inches: 0.0254,
+                feet: 0.3048,
+                yards: 0.9144,
+                miles: 1609.34
+            };
+
+            let meters = value * toMeters[from];
+            let finalValue = meters / toMeters[to];
+
+            document.getElementById("result").innerText =
+                value + " " + from.replace("_", " ") +
+                " = " + finalValue.toFixed(4) + " " + to.replace("_", " ");
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>Length Converter</header>
+
+    <div class="container">
+        <h2>Convert Length</h2>
+
+        <input type="number" id="value" placeholder="Enter value">
+
+        <select id="from">
+            <option value="meters">Meters</option>
+            <option value="centimeters">Centimeters</option>
+            <option value="millimeters">Millimeters</option>
+            <option value="kilometers">Kilometers</option>
+            <option value="inches">Inches</option>
+            <option value="feet">Feet</option>
+            <option value="yards">Yards</option>
+            <option value="miles">Miles</option>
+        </select>
+
+        <select id="to">
+            <option value="meters">Meters</option>
+            <option value="centimeters">Centimeters</option>
+            <option value="millimeters">Millimeters</option>
+            <option value="kilometers">Kilometers</option>
+            <option value="inches">Inches</option>
+            <option value="feet">Feet</option>
+            <option value="yards">Yards</option>
+            <option value="miles">Miles</option>
+        </select>
+
+        <button onclick="convertLength()">Convert</button>
+
+        <p id="result" style="margin-top: 20px; font-size: 18px; font-weight: bold;"></p>
+
+        <a class="back" href="index.html">← Back to Home</a>
+    </div>
+
+</body>
+</html>
