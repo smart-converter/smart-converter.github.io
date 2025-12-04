@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Converter</title>
 
+    <title>Smart Converter – Online Unit Converter</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Smart Converter – fast and simple online converter for length, weight, volume, temperature and more.">
+    <meta name="keywords" content="unit converter, smart converter, length converter, weight converter, volume converter, temperature converter">
+
+    <!-- SOCIAL PREVIEW -->
+    <meta property="og:title" content="Smart Converter – Online Unit Converter">
+    <meta property="og:description" content="Fast and simple conversions for length, weight, volume, temperature and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://smart-converter.github.io/preview.png">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="favicon.png">
+
+    <!-- MAIN CSS -->
     <link rel="stylesheet" href="styles.css">
 
+    <!-- PAGE STYLE -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,12 +77,14 @@
 </head>
 
 <body>
-    <!-- BURGER MENU BUTTON -->
+
+<!-- BURGER MENU BUTTON -->
 <div class="burger-button" onclick="openMenu()">☰</div>
 
-<!-- SIDE MENU PANEL -->
+<!-- SIDE MENU -->
 <div id="sideMenu" class="side-menu">
     <div class="close-btn" onclick="closeMenu()">×</div>
+
     <h2>Smart Converter</h2>
 
     <a href="index.html">🏠 Home</a>
@@ -89,22 +107,25 @@
 
     <hr>
 
-    <a href="#">🔒 Privacy</a>
-    <a href="#">📬 Contact</a>
+    <a href="privacy.html">🔒 Privacy Policy</a>
+    <a href="contact.html">📬 Contact</a>
 </div>
 
-    <header>Smart Converter</header>
+<!-- HEADER -->
+<header>Smart Converter</header>
 
-    <div class="container">
-        <h2>Choose a converter:</h2>
+<!-- MAIN CONTENT -->
+<div class="container">
+    <h1 style="font-size: 24px; margin-bottom: 20px;">Choose a converter</h1>
 
-        <div class="menu">
-            <a href="length.html">Length Converter</a>
-            <a href="weight.html">Weight Converter</a>
-            <a href="volume.html">Volume Converter</a>
-            <a href="temperature.html">Temperature Converter</a>
-        </div>
+    <div class="menu">
+        <a href="length.html">Length Converter</a>
+        <a href="weight.html">Weight Converter</a>
+        <a href="volume.html">Volume Converter</a>
+        <a href="temperature.html">Temperature Converter</a>
     </div>
+</div>
+
 <script src="script.js"></script>
 </body>
-</html>
+</html> 
