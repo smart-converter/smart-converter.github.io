@@ -46,8 +46,8 @@
             max-width: 400px;
         }
 
-        h2 {
-            font-size: 22px;
+        h1 {
+            font-size: 24px;
             margin-bottom: 20px;
         }
 
@@ -73,6 +73,60 @@
         .menu a:hover {
             background: #c8e6c9;
         }
+
+        /* BURGER */
+        .burger-button {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            font-size: 32px;
+            cursor: pointer;
+            color: white;
+            z-index: 1000;
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -260px;
+            height: 100%;
+            width: 260px;
+            background: #1b5e20;
+            color: white;
+            padding: 20px;
+            transition: 0.4s;
+            z-index: 999;
+        }
+
+        .side-menu.open {
+            right: 0;
+        }
+
+        .side-menu a {
+            display: block;
+            padding: 12px 0;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .side-menu a:hover {
+            color: #c8e6c9;
+        }
+
+        .close-btn {
+            font-size: 32px;
+            cursor: pointer;
+            text-align: right;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            margin: 15px 0;
+        }
+
     </style>
 </head>
 
@@ -108,7 +162,8 @@
     <hr>
 
     <a href="privacy.html">🔒 Privacy Policy</a>
-    <a href="contact.html">📬 Contact</a>
+    <a href="terms.html">📄 Terms of Use</a>
+    <a href="contacts.html">📬 Contact</a>
 </div>
 
 <!-- HEADER -->
@@ -116,7 +171,7 @@
 
 <!-- MAIN CONTENT -->
 <div class="container">
-    <h1 style="font-size: 24px; margin-bottom: 20px;">Choose a converter</h1>
+    <h1>Choose a converter</h1>
 
     <div class="menu">
         <a href="length.html">Length Converter</a>
@@ -126,6 +181,15 @@
     </div>
 </div>
 
-<script src="script.js"></script>
+<script>
+function openMenu() {
+    document.getElementById("sideMenu").classList.add("open");
+}
+
+function closeMenu() {
+    document.getElementById("sideMenu").classList.remove("open");
+}
+</script>
+
 </body>
-</html> 
+</html>
