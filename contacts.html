@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <!-- check contacts page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Контакти - Smart Converter</title>
+    <title>Контакти – Smart Converter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Контакти</h1>
-        <nav>
-            <a href="index.html">Головна</a>
-            <a href="contacts.html">Контакти</a>
-        </nav>
-    </header>
 
-    <main>
-        <section>
-            <h2>Зв’яжіться з нами</h2>
-            <p>Маєте питання або пропозиції? Напишіть нам!</p>
+<!-- BURGER MENU BUTTON -->
+<div class="burger-button" onclick="openMenu()">☰</div>
 
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-                <label for="name">Ім’я:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+<!-- SIDE MENU -->
+<div id="sideMenu" class="side-menu">
+    <div class="close-btn" onclick="closeMenu()">×</div>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+    <h2>Smart Converter</h2>
 
-                <label for="message">Повідомлення:</label><br>
-                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+    <a href="index.html">🏠 Головна</a>
+    <a href="length.html">📏 Довжина</a>
+    <a href="weight.html">⚖️ Вага</a>
+    <a href="volume.html">🧪 Об’єм</a>
+    <a href="temperature.html">🌡 Температура</a>
 
-                <input type="submit" value="Відправити">
-            </form>
-        </section>
-    </main>
+    <hr>
 
-    <footer>
-        <p>&copy; 2025 Smart Converter</p>
-    </footer>
+    <a href="#">📐 Площа (скоро)</a>
+    <a href="#">🚗 Швидкість (скоро)</a>
+    <a href="#">⏱ Час (скоро)</a>
+    <a href="#">💨 Тиск (скоро)</a>
+    <a href="#">🔥 Енергія (скоро)</a>
+    <a href="#">💱 Валюта (скоро)</a>
+    <a href="#">💾 Дані (скоро)</a>
+    <a href="#">🔌 Потужність (скоро)</a>
+    <a href="#">📍 Кут (скоро)</a>
+
+    <hr>
+
+    <a href="privacy.html">🔒 Політика конфіденційності</a>
+    <a href="terms.html">📄 Умови використання</a>
+    <a href="contacts.html">📬 Контакти</a>
+</div>
+
+<!-- PAGE CONTENT -->
+<div class="container">
+    <h1>Контакти</h1>
+    <p>Маєте питання або пропозиції? Напишіть нам!</p>
+
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <label>Ім’я:</label>
+        <input type="text" name="name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Повідомлення:</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <input type="submit" value="Відправити">
+    </form>
+</div>
+
+<script>
+function openMenu() {
+    document.getElementById("sideMenu").classList.add("open");
+}
+function closeMenu() {
+    document.getElementById("sideMenu").classList.remove("open");
+}
+</script>
+
 </body>
 </html>
