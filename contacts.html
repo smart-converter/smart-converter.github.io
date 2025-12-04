@@ -1,100 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact – Smart Converter</title>
-
-    <meta name="description" content="Contact Smart Converter support team.">
+    <title>Контакти - Smart Converter</title>
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #e8f5e9;
-            color: #2e7d32;
-        }
-
-        header {
-            background: #2e7d32;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 30px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            border: 2px solid #2e7d32;
-        }
-
-        h2 {
-            margin-top: 0;
-            text-align: center;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        .email-box {
-            margin-top: 15px;
-            padding: 15px;
-            background: #c8e6c9;
-            border-left: 4px solid #2e7d32;
-            border-radius: 8px;
-            font-size: 18px;
-            word-break: break-all;
-        }
-
-        a {
-            color: #1b5e20;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .back {
-            display: block;
-            margin-top: 25px;
-            text-align: center;
-            font-size: 18px;
-        }
-    </style>
 </head>
-
 <body>
+    <header>
+        <h1>Контакти</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="contacts.html">Контакти</a>
+        </nav>
+    </header>
 
-<header>Contact</header>
+    <main>
+        <section>
+            <h2>Зв’яжіться з нами</h2>
+            <p>Маєте питання або пропозиції? Напишіть нам!</p>
 
-<div class="container">
-    <h2>Get in touch</h2>
+            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+                <label for="name">Ім’я:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
 
-    <p>
-        If you have any questions, suggestions, or partnership offers,
-        feel free to contact us.  
-        We usually reply within 24–48 hours.
-    </p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
 
-    <div class="email-box">
-        📬 Email:  
-        <br>
-        <a href="mailto:smart.converter.team@gmail.com">smart.converter.team@gmail.com</a>
-    </div>
+                <label for="message">Повідомлення:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-    <a class="back" href="index.html">← Back to Home</a>
-</div>
+                <input type="submit" value="Відправити">
+            </form>
+        </section>
+    </main>
 
+    <footer>
+        <p>&copy; 2025 Smart Converter</p>
+    </footer>
 </body>
 </html>
