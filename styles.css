@@ -1,11 +1,19 @@
-body {
+/* RESET */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background: #f7fafc;
-    color: #333;
 }
 
-/* Container */
+/* BODY */
+body {
+    background: #f7fafc;
+    color: #333;
+    padding: 20px;
+}
+
+/* CONTAINER */
 .container {
     max-width: 800px;
     margin: 20px auto;
@@ -14,14 +22,14 @@ body {
     border-radius: 12px;
 }
 
-/* Burger Button */
+/* BURGER BUTTON */
 .burger-button {
-    font-size: 30px;
+    font-size: 32px;
     padding: 15px;
     cursor: pointer;
 }
 
-/* Side Menu */
+/* SIDE MENU */
 .side-menu {
     position: fixed;
     top: 0;
@@ -31,42 +39,57 @@ body {
     background: #1d1f27;
     color: white;
     padding: 20px;
-    transition: 0.3s;
+    transition: 0.3s ease;
+    overflow-y: auto;
 }
 
 .side-menu.open {
     left: 0;
 }
 
+.side-menu h2 {
+    margin-bottom: 15px;
+}
+
 .side-menu a {
     display: block;
     color: white;
-    text-decoration: none;
     padding: 10px 0;
+    text-decoration: none;
 }
 
 .side-menu .close-btn {
     font-size: 30px;
     cursor: pointer;
+    text-align: right;
 }
 
-/* Form */
+/* FORM */
 form {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 input, textarea {
     width: 100%;
-    margin-bottom: 12px;
-    padding: 10px;
+    margin-bottom: 15px;
+    padding: 12px;
     border: 1px solid #bbb;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
 input[type="submit"] {
     background: #4caf50;
     color: white;
-    cursor: pointer;
     border: none;
+    padding: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+input[type="submit"]:hover {
+    background: #45a049;
 }
