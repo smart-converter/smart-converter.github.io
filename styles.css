@@ -15,16 +15,27 @@ body {
 
 /* CONTAINER */
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 20px auto;
     background: white;
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* TITLES */
+h1 {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 /* BURGER BUTTON */
 .burger-button {
-    font-size: 32px;
+    font-size: 34px;
     padding: 15px;
     cursor: pointer;
 }
@@ -33,14 +44,15 @@ body {
 .side-menu {
     position: fixed;
     top: 0;
-    left: -260px;
-    width: 260px;
+    left: -280px;
+    width: 280px;
     height: 100%;
     background: #1d1f27;
     color: white;
     padding: 20px;
     transition: 0.3s ease;
     overflow-y: auto;
+    z-index: 1000;
 }
 
 .side-menu.open {
@@ -49,19 +61,48 @@ body {
 
 .side-menu h2 {
     margin-bottom: 15px;
+    font-size: 22px;
 }
 
 .side-menu a {
     display: block;
     color: white;
-    padding: 10px 0;
+    padding: 12px 0;
     text-decoration: none;
+    font-size: 18px;
 }
 
-.side-menu .close-btn {
-    font-size: 30px;
-    cursor: pointer;
+.side-menu a:hover {
+    text-decoration: underline;
+}
+
+.close-btn {
+    font-size: 34px;
     text-align: right;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+/* CATEGORY LIST */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.cat {
+    background: #e9f0ff;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #003366;
+    font-size: 18px;
+    border: 1px solid #c9d6ef;
+    transition: 0.2s;
+}
+
+.cat:hover {
+    background: #d7e4ff;
 }
 
 /* FORM */
@@ -71,25 +112,48 @@ form {
     margin-top: 20px;
 }
 
-input, textarea {
+input, select, textarea {
     width: 100%;
-    margin-bottom: 15px;
     padding: 12px;
+    margin-bottom: 15px;
     border: 1px solid #bbb;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 16px;
 }
 
-input[type="submit"] {
+button, input[type="submit"] {
     background: #4caf50;
     color: white;
-    border: none;
     padding: 14px;
-    cursor: pointer;
-    border-radius: 8px;
+    border: none;
+    border-radius: 6px;
     font-size: 17px;
+    cursor: pointer;
 }
 
-input[type="submit"]:hover {
+button:hover, input[type="submit"]:hover {
     background: #45a049;
+}
+
+/* ADS */
+.ad-block {
+    background: #f0f0f0;
+    border: 1px dashed #aaa;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* FOOTER LINKS */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    color: #333;
 }
