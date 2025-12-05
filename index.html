@@ -1,196 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Smart Converter – Online Unit Converter</title>
-
-    <!-- SEO -->
-    <meta name="description" content="Smart Converter – fast and simple online converter for length, weight, volume, temperature and more.">
-    <meta name="keywords" content="unit converter, smart converter, length converter, weight converter, volume converter, temperature converter">
-
-    <!-- SOCIAL PREVIEW -->
-    <meta property="og:title" content="Smart Converter – Online Unit Converter">
-    <meta property="og:description" content="Fast and simple conversions for length, weight, volume, temperature and more.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://smart-converter.github.io/preview.png">
-
-    <!-- FAVICON -->
-    <link rel="icon" href="favicon.png">
-
-    <!-- MAIN CSS -->
+    <title>Smart Converter – Головна</title>
     <link rel="stylesheet" href="styles.css">
-
-    <!-- PAGE STYLE -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #e8f5e9;
-            color: #2e7d32;
-            text-align: center;
-        }
-
-        header {
-            padding: 25px;
-            background: #2e7d32;
-            color: white;
-            font-size: 26px;
-            font-weight: bold;
-        }
-
-        .container {
-            margin: 40px auto;
-            max-width: 400px;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .menu {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .menu a {
-            display: block;
-            padding: 15px;
-            background: white;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #2e7d32;
-            font-size: 18px;
-            font-weight: bold;
-            border: 2px solid #2e7d32;
-            transition: 0.2s;
-        }
-
-        .menu a:hover {
-            background: #c8e6c9;
-        }
-
-        /* BURGER */
-        .burger-button {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            font-size: 32px;
-            cursor: pointer;
-            color: white;
-            z-index: 1000;
-        }
-
-        .side-menu {
-            position: fixed;
-            top: 0;
-            right: -260px;
-            height: 100%;
-            width: 260px;
-            background: #1b5e20;
-            color: white;
-            padding: 20px;
-            transition: 0.4s;
-            z-index: 999;
-        }
-
-        .side-menu.open {
-            right: 0;
-        }
-
-        .side-menu a {
-            display: block;
-            padding: 12px 0;
-            font-size: 18px;
-            text-decoration: none;
-            color: white;
-            border-bottom: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .side-menu a:hover {
-            color: #c8e6c9;
-        }
-
-        .close-btn {
-            font-size: 32px;
-            cursor: pointer;
-            text-align: right;
-        }
-
-        hr {
-            border: none;
-            border-top: 1px solid rgba(255,255,255,0.3);
-            margin: 15px 0;
-        }
-
-    </style>
 </head>
-
 <body>
 
-<!-- BURGER MENU BUTTON -->
 <div class="burger-button" onclick="openMenu()">☰</div>
 
-<!-- SIDE MENU -->
 <div id="sideMenu" class="side-menu">
     <div class="close-btn" onclick="closeMenu()">×</div>
-
     <h2>Smart Converter</h2>
 
-    <a href="index.html">🏠 Home</a>
-    <a href="length.html">📏 Length</a>
-    <a href="weight.html">⚖️ Weight</a>
-    <a href="volume.html">🧪 Volume</a>
-    <a href="temperature.html">🌡 Temperature</a>
+    <a href="index.html">🏠 Головна</a>
+    <a href="length.html">📏 Довжина</a>
+    <a href="weight.html">⚖️ Вага</a>
+    <a href="volume.html">🧪 Об’єм</a>
+    <a href="temperature.html">🌡 Температура</a>
 
     <hr>
 
-    <a href="#">📐 Area (soon)</a>
-    <a href="#">🚗 Speed (soon)</a>
-    <a href="#">⏱ Time (soon)</a>
-    <a href="#">💨 Pressure (soon)</a>
-    <a href="#">🔥 Energy (soon)</a>
-    <a href="#">💱 Currency (soon)</a>
-    <a href="#">💾 Data (soon)</a>
-    <a href="#">🔌 Power (soon)</a>
-    <a href="#">📍 Angle (soon)</a>
-
-    <hr>
-
-    <a href="privacy.html">🔒 Privacy Policy</a>
-    <a href="terms.html">📄 Terms of Use</a>
-    <a href="contacts.html">📬 Contact</a>
+    <a href="privacy.html">🔒 Політика конфіденційності</a>
+    <a href="terms.html">📄 Умови використання</a>
+    <a href="contacts.html">📬 Контакти</a>
 </div>
 
-<!-- HEADER -->
-<header>Smart Converter</header>
-
-<!-- MAIN CONTENT -->
 <div class="container">
-    <h1>Choose a converter</h1>
-
-    <div class="menu">
-        <a href="length.html">Length Converter</a>
-        <a href="weight.html">Weight Converter</a>
-        <a href="volume.html">Volume Converter</a>
-        <a href="temperature.html">Temperature Converter</a>
-    </div>
+    <h1>Smart Converter</h1>
+    <p>Виберіть потрібний інструмент у меню.</p>
 </div>
 
-<script>
-function openMenu() {
-    document.getElementById("sideMenu").classList.add("open");
-}
-
-function closeMenu() {
-    document.getElementById("sideMenu").classList.remove("open");
-}
-</script>
-<!-- test commit -->
-    <!-- redeploy test -->
+<script src="script.js"></script>
 </body>
 </html>
